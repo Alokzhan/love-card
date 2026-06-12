@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
+<meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Infinite Love ❤️</title>
+<title>My Infinite Love ❤️</title>
+
 
 <style>
 
@@ -17,47 +21,67 @@
 
 body{
 
-height:100vh;
+min-height:100vh;
+
 display:flex;
+
 justify-content:center;
-align-items:center;
+
+align-items:flex-start;
+
+padding:25px 0;
 
 background:
-linear-gradient(135deg,#ffe6ef,#fff8fb);
+linear-gradient(135deg,#ffe3ee,#fff9fc);
 
-overflow:hidden;
+overflow-y:auto;
 
 font-family:"Georgia",serif;
 
 }
 
 
-/* floating hearts */
+
+/* Floating hearts */
 
 .heart{
 
-position:absolute;
+position:fixed;
+
 bottom:-20px;
-color:#ff8db3;
-animation:rise 8s linear infinite;
+
+color:#ff8bb3;
+
+animation:float 8s linear infinite;
+
+z-index:0;
 
 }
 
 
-@keyframes rise{
+
+@keyframes float{
 
 0%{
+
 transform:translateY(0);
+
 opacity:0;
+
 }
 
+
 20%{
+
 opacity:1;
+
 }
+
 
 100%{
 
 transform:translateY(-110vh);
+
 opacity:0;
 
 }
@@ -66,62 +90,76 @@ opacity:0;
 
 
 
-/* main card */
+
+/* CARD */
+
 
 .card{
 
-width:min(90vw,430px);
+position:relative;
 
-height:min(95vh,760px);
+z-index:2;
 
-background:#ffffffcc;
 
-backdrop-filter:blur(10px);
+width:min(92vw,430px);
+
+
+background:#ffffffdd;
+
 
 border-radius:35px;
 
+
 padding:35px 28px;
 
+
 box-shadow:
-0 15px 40px rgba(220,80,130,.25);
+0 15px 45px rgba(210,80,130,.25);
+
 
 text-align:center;
 
-overflow:hidden;
+
+margin-bottom:30px;
+
 
 }
 
 
 
 
-.top-heart{
+.heart-logo{
 
-font-size:55px;
+font-size:65px;
 
 animation:pulse 1.5s infinite;
 
 }
 
 
+
 @keyframes pulse{
 
 50%{
-transform:scale(1.15);
+
+transform:scale(1.2);
+
 }
 
 }
+
 
 
 
 h1{
 
-margin-top:15px;
-
-font-size:clamp(25px,5vw,34px);
-
 color:#d6336c;
 
-line-height:1.1;
+font-size:32px;
+
+line-height:1.2;
+
+margin-top:15px;
 
 }
 
@@ -129,9 +167,9 @@ line-height:1.1;
 
 .subtitle{
 
-margin:15px;
-
 color:#d86b91;
+
+margin:15px;
 
 font-size:18px;
 
@@ -139,41 +177,66 @@ font-size:18px;
 
 
 
-/* message display */
+
+/* Message */
+
 
 .display{
 
-background:#fff1f6;
 
-border:1px solid #ffc5d8;
+background:#fff0f5;
 
-border-radius:20px;
 
-padding:22px;
+border:1px solid #ffc2d8;
 
-height:145px;
+
+border-radius:22px;
+
+
+padding:25px;
+
+
+min-height:140px;
+
+
+max-height:250px;
+
+
+overflow-y:auto;
+
 
 display:flex;
 
+
 align-items:center;
+
 
 justify-content:center;
 
-font-size:18px;
+
+font-size:19px;
+
 
 font-style:italic;
 
-color:#8c3452;
 
-overflow:auto;
+color:#8b3552;
+
+
+line-height:1.6;
+
 
 }
 
+
+
+
+/* Tags */
 
 
 .tags{
 
-margin:15px 0;
+margin:18px 0;
 
 }
 
@@ -182,19 +245,61 @@ margin:15px 0;
 .tags button{
 
 
+padding:9px 18px;
+
+
+margin:5px;
+
+
+border-radius:25px;
+
+
 border:1px solid #ffc1d5;
+
 
 background:white;
 
+
 color:#d6336c;
 
-padding:8px 16px;
-
-border-radius:20px;
-
-margin:4px;
 
 cursor:pointer;
+
+
+font-size:14px;
+
+
+}
+
+
+
+
+hr{
+
+border:none;
+
+height:1px;
+
+background:#ffd0df;
+
+margin:25px 0;
+
+}
+
+
+
+
+label{
+
+display:block;
+
+text-align:left;
+
+color:#d86b91;
+
+font-size:17px;
+
+margin-bottom:10px;
 
 }
 
@@ -203,99 +308,142 @@ cursor:pointer;
 
 textarea{
 
+
 width:100%;
 
-height:100px;
 
-border-radius:18px;
+height:120px;
 
-border:1px solid #ffc1d5;
-
-padding:15px;
 
 resize:none;
 
-font-size:16px;
 
-font-family:inherit;
+border-radius:20px;
+
+
+border:1px solid #ffc1d5;
+
+
+padding:18px;
+
+
+font-size:17px;
+
+
+font-family:Georgia;
+
+
+outline:none;
+
 
 }
 
 
 
 
-.main{
+.main-btn{
 
-margin-top:15px;
+
+margin-top:18px;
+
 
 width:100%;
 
-height:50px;
+
+height:55px;
+
 
 border:none;
 
-border-radius:25px;
+
+border-radius:30px;
+
 
 background:
-linear-gradient(90deg,#e84d88,#c72b6c);
+linear-gradient(90deg,#df4d87,#c92d6c);
+
 
 color:white;
 
-font-size:18px;
+
+font-size:19px;
+
 
 font-weight:bold;
 
+
 cursor:pointer;
+
 
 }
 
 
 
-.row{
+
+.action{
+
 
 display:flex;
 
-gap:10px;
 
-margin-top:12px;
+gap:12px;
+
+
+margin-top:15px;
+
 
 }
 
 
 
-.row button{
+.action button{
 
 
 flex:1;
 
-height:45px;
 
-border-radius:22px;
+height:48px;
 
-border:1px solid #ffbdd2;
+
+border-radius:25px;
+
+
+border:1px solid #ffc1d5;
+
 
 background:white;
 
+
 color:#d6336c;
+
+
+font-size:15px;
+
 
 font-weight:bold;
 
+
 cursor:pointer;
 
+
 }
+
 
 
 
 footer{
 
-margin-top:15px;
+
+margin-top:20px;
+
+
+color:#d88aa8;
+
 
 font-size:14px;
 
-color:#d78ba5;
 
 }
-
 
 
 
@@ -304,61 +452,86 @@ color:#d78ba5;
 </head>
 
 
+
+
 <body>
 
 
 
-<div class="card" id="card">
+
+<div class="card" id="loveCard">
 
 
-<div class="top-heart">
+
+<div class="heart-logo">
 ❤️
 </div>
 
 
+
 <h1>
+
 My Infinite Love<br>
 For You
+
 </h1>
 
 
 <div class="subtitle">
 
-💌 for my love
+💌 For My Love
 
 </div>
 
 
 
-<div class="display" id="show">
+
+
+<div class="display" id="display">
 
 My love for you has no beginning and no end.
-You are my forever happiness. 🌸
+You are my happiness, my smile, and my forever. 🌸
 
 </div>
+
 
 
 
 
 <div class="tags">
 
-<button onclick="change('You are my sunshine ☀️❤️')">
+
+<button onclick="quick('You are my sunshine and my reason to smile every day ☀️❤️')">
+
 Sunshine
+
 </button>
 
 
-<button onclick="change('Every memory with you is precious 💕')">
+
+<button onclick="quick('Every memory with you is my favorite treasure 💕')">
+
 Memories
+
 </button>
 
 
-<button onclick="change('I will love you forever ♾️❤️')">
+
+
+<button onclick="quick('I promise to love you forever and always ♾️❤️')">
+
 Forever
+
 </button>
 
 
-<button onclick="change('You complete my heart 💖')">
+
+
+
+<button onclick="quick('You complete my heart and my world 💖')">
+
 My Heart
+
 </button>
 
 
@@ -366,13 +539,33 @@ My Heart
 
 
 
-<textarea id="msg">
-No matter where life takes us, my heart will always choose you. I love you forever ❤️
+
+
+<hr>
+
+
+
+
+<label>
+✦ Write your own message
+</label>
+
+
+
+
+<textarea id="message">
+
+No matter where life takes us,
+my heart will always choose you.
+I love you forever ❤️
+
 </textarea>
 
 
 
-<button class="main" onclick="showMessage()">
+
+
+<button class="main-btn" onclick="showMessage()">
 
 💌 Show My Message
 
@@ -381,13 +574,16 @@ No matter where life takes us, my heart will always choose you. I love you forev
 
 
 
-<div class="row">
 
-<button onclick="saveImage()">
+<div class="action">
+
+
+<button onclick="saveCard()">
 
 ⬇ Save Result
 
 </button>
+
 
 
 <button onclick="sendLove()">
@@ -396,60 +592,80 @@ No matter where life takes us, my heart will always choose you. I love you forev
 
 </button>
 
+
 </div>
+
+
 
 
 
 <footer>
 
-Made with unlimited love ❤️
+Made with endless love ❤️
 
 </footer>
+
+
 
 
 </div>
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+
+<script src="
+https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js">
+</script>
 
 
 
 <script>
 
 
-function change(text){
 
-document.getElementById("msg").value=text;
+function quick(text){
+
+document.getElementById("message").value=text;
 
 }
+
+
 
 
 
 function showMessage(){
 
-let text=document.getElementById("msg").value;
+let msg=document.getElementById("message").value;
 
-document.getElementById("show").innerHTML=text;
+
+document.getElementById("display").innerHTML=
+msg.replace(/\n/g,"<br>");
 
 }
 
 
 
-function saveImage(){
+
+function saveCard(){
 
 
-html2canvas(document.getElementById("card"))
+html2canvas(document.getElementById("loveCard"))
+
 .then(canvas=>{
 
 
-let a=document.createElement("a");
+let link=document.createElement("a");
 
-a.download="Infinite_Love_Card.png";
 
-a.href=canvas.toDataURL();
+link.download="My_Infinite_Love.png";
 
-a.click();
+
+link.href=canvas.toDataURL();
+
+
+link.click();
+
 
 
 });
@@ -460,51 +676,70 @@ a.click();
 
 
 
+
 function sendLove(){
 
-let text=document.getElementById("msg").value;
+
+let msg=document.getElementById("message").value;
 
 
-window.open(
+let url=
 
 "https://wa.me/?text="+
 
 encodeURIComponent(
-"❤️ My Love Message ❤️\n\n"+text
-)
+
+"❤️ My Infinite Love Message ❤️\n\n"+msg
 
 );
 
 
+
+window.open(url,"_blank");
+
+
 }
+
+
 
 
 
 // floating hearts
 
-for(let i=0;i<30;i++){
 
-let h=document.createElement("div");
+for(let i=0;i<35;i++){
 
-h.className="heart";
 
-h.innerHTML="❤";
+let heart=document.createElement("div");
 
-h.style.left=Math.random()*100+"%";
 
-h.style.animationDelay=Math.random()*8+"s";
+heart.className="heart";
 
-h.style.fontSize=
+
+heart.innerHTML="❤";
+
+
+heart.style.left=Math.random()*100+"%";
+
+
+heart.style.animationDelay=Math.random()*8+"s";
+
+
+heart.style.fontSize=
 (12+Math.random()*25)+"px";
 
 
-document.body.appendChild(h);
+document.body.appendChild(heart);
+
 
 }
+
 
 
 </script>
 
 
+
 </body>
+
 </html>
