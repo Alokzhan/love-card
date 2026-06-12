@@ -1,151 +1,302 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>My Love Message ❤️</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Infinite Love ❤️</title>
 
 <style>
+
 *{
+    margin:0;
+    padding:0;
     box-sizing:border-box;
-    font-family:"Georgia",serif;
 }
 
+
 body{
-    margin:0;
-    min-height:100vh;
-    background:linear-gradient(135deg,#ffe5ef,#fff6fa);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:
+linear-gradient(135deg,#ffe6ef,#fff8fb);
+
+overflow:hidden;
+
+font-family:"Georgia",serif;
+
 }
 
 
 /* floating hearts */
+
 .heart{
-    position:absolute;
-    color:#ff7ba9;
-    animation:float 6s infinite;
-    opacity:.5;
+
+position:absolute;
+bottom:-20px;
+color:#ff8db3;
+animation:rise 8s linear infinite;
+
 }
 
-@keyframes float{
-    from{
-        transform:translateY(100vh);
-    }
-    to{
-        transform:translateY(-20vh);
-    }
+
+@keyframes rise{
+
+0%{
+transform:translateY(0);
+opacity:0;
 }
 
+20%{
+opacity:1;
+}
+
+100%{
+
+transform:translateY(-110vh);
+opacity:0;
+
+}
+
+}
+
+
+
+/* main card */
 
 .card{
 
-    width:430px;
-    min-height:720px;
-    background:#fffafa;
-    border-radius:35px;
-    padding:45px 40px;
-    box-shadow:0 20px 50px #e8b7ca;
-    text-align:center;
+width:min(90vw,430px);
+
+height:min(95vh,760px);
+
+background:#ffffffcc;
+
+backdrop-filter:blur(10px);
+
+border-radius:35px;
+
+padding:35px 28px;
+
+box-shadow:
+0 15px 40px rgba(220,80,130,.25);
+
+text-align:center;
+
+overflow:hidden;
+
 }
 
 
-.big-heart{
-    font-size:70px;
-    animation:pulse 1.5s infinite;
+
+
+.top-heart{
+
+font-size:55px;
+
+animation:pulse 1.5s infinite;
+
 }
 
 
 @keyframes pulse{
-    50%{
-        transform:scale(1.2);
-    }
+
+50%{
+transform:scale(1.15);
 }
+
+}
+
 
 
 h1{
-    color:#d6336c;
-    font-size:32px;
+
+margin-top:15px;
+
+font-size:clamp(25px,5vw,34px);
+
+color:#d6336c;
+
+line-height:1.1;
+
 }
+
 
 
 .subtitle{
-    color:#d86b91;
-    margin-bottom:30px;
+
+margin:15px;
+
+color:#d86b91;
+
+font-size:18px;
+
 }
 
 
-.message-box{
 
-    background:#fff0f5;
-    border:1px solid #ffc1d7;
-    border-radius:22px;
-    padding:25px;
-    font-size:20px;
-    font-style:italic;
-    color:#8b3552;
-    min-height:120px;
+/* message display */
+
+.display{
+
+background:#fff1f6;
+
+border:1px solid #ffc5d8;
+
+border-radius:20px;
+
+padding:22px;
+
+height:145px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:18px;
+
+font-style:italic;
+
+color:#8c3452;
+
+overflow:auto;
+
 }
 
 
-.buttons button{
 
-    margin:8px;
-    padding:10px 20px;
-    border-radius:20px;
-    border:1px solid #ffbad1;
-    background:white;
-    color:#d6336c;
-    cursor:pointer;
+.tags{
+
+margin:15px 0;
+
 }
+
+
+
+.tags button{
+
+
+border:1px solid #ffc1d5;
+
+background:white;
+
+color:#d6336c;
+
+padding:8px 16px;
+
+border-radius:20px;
+
+margin:4px;
+
+cursor:pointer;
+
+}
+
+
 
 
 textarea{
 
-    width:100%;
-    height:110px;
-    margin-top:15px;
-    border-radius:20px;
-    padding:20px;
-    border:1px solid #ffbfd5;
-    font-size:17px;
+width:100%;
+
+height:100px;
+
+border-radius:18px;
+
+border:1px solid #ffc1d5;
+
+padding:15px;
+
+resize:none;
+
+font-size:16px;
+
+font-family:inherit;
+
 }
 
 
-.main-btn{
 
-    margin-top:20px;
-    width:100%;
-    padding:18px;
-    border:none;
-    border-radius:20px;
-    background:linear-gradient(90deg,#df4c85,#c92b6b);
-    color:white;
-    font-size:20px;
-    font-weight:bold;
-    cursor:pointer;
+
+.main{
+
+margin-top:15px;
+
+width:100%;
+
+height:50px;
+
+border:none;
+
+border-radius:25px;
+
+background:
+linear-gradient(90deg,#e84d88,#c72b6c);
+
+color:white;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
 }
 
 
-.save-btn{
 
-    background:#ff7ca8;
-    margin-top:15px;
+.row{
+
+display:flex;
+
+gap:10px;
+
+margin-top:12px;
+
 }
 
 
-.share-btn{
 
-    background:#25D366;
-    margin-top:15px;
+.row button{
+
+
+flex:1;
+
+height:45px;
+
+border-radius:22px;
+
+border:1px solid #ffbdd2;
+
+background:white;
+
+color:#d6336c;
+
+font-weight:bold;
+
+cursor:pointer;
+
 }
+
 
 
 footer{
 
-    margin-top:20px;
-    color:#d88aa8;
+margin-top:15px;
+
+font-size:14px;
+
+color:#d78ba5;
+
 }
+
+
 
 
 </style>
@@ -156,49 +307,58 @@ footer{
 <body>
 
 
-<div class="card" id="loveCard">
+
+<div class="card" id="card">
 
 
-<div class="big-heart">❤️</div>
+<div class="top-heart">
+❤️
+</div>
+
 
 <h1>
-A Message From My<br>
-Infinite Love
+My Infinite Love<br>
+For You
 </h1>
 
 
 <div class="subtitle">
-💌 For my soulmate
-</div>
 
-
-<div class="message-box" id="display">
-
-You are my sunshine, my reason to smile every single day. 🌸
+💌 for my love
 
 </div>
 
 
 
-<div class="buttons">
+<div class="display" id="show">
 
-<button onclick="setMsg('You are my forever happiness ❤️')">
+My love for you has no beginning and no end.
+You are my forever happiness. 🌸
+
+</div>
+
+
+
+
+<div class="tags">
+
+<button onclick="change('You are my sunshine ☀️❤️')">
 Sunshine
 </button>
 
 
-<button onclick="setMsg('Every memory with you is my treasure 💕')">
+<button onclick="change('Every memory with you is precious 💕')">
 Memories
 </button>
 
 
-<button onclick="setMsg('I will love you forever and always 💖')">
-Always
+<button onclick="change('I will love you forever ♾️❤️')">
+Forever
 </button>
 
 
-<button onclick="setMsg('You complete my heart ❤️')">
-Complete Me
+<button onclick="change('You complete my heart 💖')">
+My Heart
 </button>
 
 
@@ -206,22 +366,13 @@ Complete Me
 
 
 
-<hr>
-
-
-
-<h3 style="color:#d86b91">
-✦ Write your own message
-</h3>
-
-
-<textarea id="input">
-You are my sunshine, my reason to smile every single day. 🌸
+<textarea id="msg">
+No matter where life takes us, my heart will always choose you. I love you forever ❤️
 </textarea>
 
 
 
-<button class="main-btn" onclick="showMessage()">
+<button class="main" onclick="showMessage()">
 
 💌 Show My Message
 
@@ -229,23 +380,30 @@ You are my sunshine, my reason to smile every single day. 🌸
 
 
 
-<button class="main-btn save-btn" onclick="saveCard()">
 
-📸 Save Result
+<div class="row">
+
+<button onclick="saveImage()">
+
+⬇ Save Result
+
+</button>
+
+
+<button onclick="sendLove()">
+
+💌 Send Love
 
 </button>
 
+</div>
 
-
-<button class="main-btn share-btn" onclick="shareLove()">
-
-💚 Send To My Love
-
-</button>
 
 
 <footer>
-Tap ❤️ and share your feelings forever
+
+Made with unlimited love ❤️
+
 </footer>
 
 
@@ -253,15 +411,16 @@ Tap ❤️ and share your feelings forever
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+
 
 <script>
 
 
-function setMsg(text){
+function change(text){
 
-document.getElementById("input").value=text;
-
-document.getElementById("display").innerHTML=text;
+document.getElementById("msg").value=text;
 
 }
 
@@ -269,28 +428,29 @@ document.getElementById("display").innerHTML=text;
 
 function showMessage(){
 
-let msg=document.getElementById("input").value;
+let text=document.getElementById("msg").value;
 
-document.getElementById("display").innerHTML=msg;
+document.getElementById("show").innerHTML=text;
 
 }
 
 
 
-function saveCard(){
-
-let card=document.getElementById("loveCard");
+function saveImage(){
 
 
-html2canvas(card).then(canvas=>{
+html2canvas(document.getElementById("card"))
+.then(canvas=>{
 
-let link=document.createElement("a");
 
-link.download="My_Love_Message.png";
+let a=document.createElement("a");
 
-link.href=canvas.toDataURL();
+a.download="Infinite_Love_Card.png";
 
-link.click();
+a.href=canvas.toDataURL();
+
+a.click();
+
 
 });
 
@@ -299,29 +459,30 @@ link.click();
 
 
 
-function shareLove(){
 
-let msg=document.getElementById("input").value;
+function sendLove(){
+
+let text=document.getElementById("msg").value;
 
 
-let whatsapp=
+window.open(
+
 "https://wa.me/?text="+
+
 encodeURIComponent(
-"❤️ My Love Message ❤️\n\n"+msg
+"❤️ My Love Message ❤️\n\n"+text
+)
+
 );
-
-
-window.open(whatsapp,"_blank");
 
 
 }
 
 
 
+// floating hearts
 
-// create floating hearts
-
-for(let i=0;i<25;i++){
+for(let i=0;i<30;i++){
 
 let h=document.createElement("div");
 
@@ -331,21 +492,17 @@ h.innerHTML="❤";
 
 h.style.left=Math.random()*100+"%";
 
-h.style.animationDelay=Math.random()*5+"s";
+h.style.animationDelay=Math.random()*8+"s";
 
-h.style.fontSize=(10+Math.random()*25)+"px";
+h.style.fontSize=
+(12+Math.random()*25)+"px";
+
 
 document.body.appendChild(h);
 
 }
 
 
-</script>
-
-
-<!-- screenshot library -->
-<script src="
-https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js">
 </script>
 
 
